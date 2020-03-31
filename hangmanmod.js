@@ -11,13 +11,21 @@ var familys = ["Mother", "Father", "Cousin", "Grandfather", "Grandmother"];
 var jobs = ["Teacher", "Firefighter", "Developer", "Doctor", "Laywer"];
 var birds = ["Nightjar", "Owl", "Sparrow", "Eagle", "Bluebird"];
 
+var heads = ['heads/monsterhead1.jpg', 'heads/monsterhead2.jpg', 'heads/monsterhead3.jpg', 'heads/monsterhead4.png', 'heads/monsterhead5.jpg', 'heads/monsterhead6.png'];
+var bodys = ['bodys/monsterbody1.jpg', 'bodys/monsterbody2.jpg', 'bodys/monsterbody3.jpg', 'bodys/monsterbody4.jpg', 'bodys/monsterbody5.png', 'bodys/monsterbody6.png'];  
+var rArms = ['rArms/monsterrarm1.jpg', 'rArms/monsterrarm2.jpg', 'rArms/monsterrarm3.jpg', 'rArms/monsterrarm4.jpg', 'rArms/monsterrarm5.png', 'rArms/monsterrarm6.png'];
+var lArms = ['lArms/monsterlarm1.jpg', 'lArms/monsterlarm2.jpg', 'lArms/monsterlarm3.jpg', 'lArms/monsterlarm4.jpg', 'lArms/monsterlarm5.png', 'lArms/monsterlarm6.png']; 
+var rLegs = ['rLegs/monsterrleg1.jpg', 'rLegs/monsterrleg2.jpg', 'rLegs/monsterrleg3.png', 'rLegs/monsterrleg4.png', 'rLegs/monsterrleg5.png', 'rLegs/monsterrleg6.png'];
+var lLegs = ['lLegs/monsterlleg1.png', 'lLegs/monsterlleg2.png', 'lLegs/monsterlleg3.jpg', 'lLegs/monsterlleg4.png', 'lLegs/monsterlleg5.png', 'lLegs/monsterlleg6.jpg']; 
+var tails = ['tails/monstertail1.jpg', 'tails/monstertail2.jpg', 'tails/monstertail3.jpg', 'tails/monstertail4.jpg', 'tails/monstertail5.jpg', 'tails/monstertail6.png'];
 
 
 
-var menu = document.getElementById("themes");
-menu.addEventListener("themes", generateData);
 
-window.onload=dropdownmenu();
+
+
+
+
 
 
 
@@ -162,13 +170,14 @@ function draw(){
     var ctx = document.getElementById("hangman").getContext('2d');
         ctx.fillStyle = "white";
         ctx.lineWidth=3;
-        ctx.fillRect(0, 0, 300, 300);
-        /*ctx.beginPath(); //vertical bar
-            ctx.moveTo(50,270);
+        ctx.fillRect(0, 0, 350, 350);
+        ctx.beginPath(); //vertical bar
+            ctx.moveTo(50,320);
             ctx.lineTo(50,25);
+            ctx.strokeStyle = '#996633';
             ctx.stroke();
         ctx.beginPath(); //vertical bar long piece
-            ctx.moveTo(65,270);
+            ctx.moveTo(65,320);
             ctx.lineTo(65,85);
             ctx.stroke();
         ctx.beginPath(); //vertical bar short piece
@@ -208,23 +217,24 @@ function draw(){
             ctx.lineTo(111,35);
             ctx.stroke();
         ctx.beginPath(); //ground
-            ctx.moveTo(35,270);
-            ctx.lineTo(265,270);
+            ctx.moveTo(35,320);
+            ctx.lineTo(300,320);
             ctx.stroke();
         ctx.beginPath(); //noose
-            ctx.moveTo(150,40);
-            ctx.lineTo(150,80);
+            ctx.moveTo(173,40);
+            ctx.lineTo(173,80);
             ctx.stroke(); 
     var cntx = document.getElementById("homeHangman").getContext('2d');
         cntx.fillStyle = "white";
         cntx.lineWidth=3;
-        cntx.fillRect(0, 0, 300, 300);
+        cntx.fillRect(0, 0, 350, 350);
         cntx.beginPath(); //vertical bar
-            cntx.moveTo(50,270);
+            cntx.moveTo(50,320);
             cntx.lineTo(50,25);
+            cntx.strokeStyle = '#996633';
             cntx.stroke();
         cntx.beginPath(); //vertical bar long piece
-            cntx.moveTo(65,270);
+            cntx.moveTo(65,320);
             cntx.lineTo(65,85);
             cntx.stroke();
         cntx.beginPath(); //vertical bar short piece
@@ -264,13 +274,13 @@ function draw(){
             cntx.lineTo(111,35);
             cntx.stroke();
         cntx.beginPath(); //ground
-            cntx.moveTo(35,270);
-            cntx.lineTo(265,270);
+            cntx.moveTo(35,320);
+            cntx.lineTo(300,320);
             cntx.stroke();
         cntx.beginPath(); //noose
-            cntx.moveTo(150,40);
-            cntx.lineTo(150,80);
-            cntx.stroke(); */
+            cntx.moveTo(173,40);
+            cntx.lineTo(173,80);
+            cntx.stroke(); 
 }
 
 function splitWords(){
@@ -343,7 +353,7 @@ function guessLetter(){
         }
     }
     if(numWrong==7){
-        results.innerHTML = "You lose! Keep Trying!";
+        results.innerHTML = "You lose!<br>Keep guessing until you get it right.";
         document.getElementById('again').style.display = "block";
         document.getElementById('home').style.display = "block";
         document.getElementById('vidSent').style.display = "block";
@@ -411,469 +421,176 @@ function win(){
     }
 }
 
+function gethead() { 
+     let headNumber = Math.floor(Math.random()*heads.length); 
+     var img=document.createElement('img');
+     img.src=heads[headNumber];
+     document.body.append(img);
+      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 140,60, 60, 60); 
+      //remove the image after drawing
+      img.style.display="none"
+      
+      }    
+
+}
+
+function getbody() { 
+     let bodyNumber = Math.floor(Math.random()*bodys.length); 
+     var img=document.createElement('img');
+     img.src=bodys[bodyNumber];
+     document.body.append(img);
+      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 140, 115, 60, 100); 
+      //remove the image after drawing
+      img.style.display="none"
+         
+      }    
+}
+
+function getrArm() { 
+     let rArmNumber = Math.floor(Math.random()*rArms.length); 
+     var img=document.createElement('img');
+     img.src=rArms[rArmNumber];
+     document.body.append(img);
+      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 190, 115, 60, 60); 
+      //remove the image after drawing
+      img.style.display="none"
+         
+      }    
+}
+
+function getlArm() { 
+     let lArmNumber = Math.floor(Math.random()*lArms.length); 
+     var img=document.createElement('img');
+     img.src=lArms[lArmNumber];
+     document.body.append(img);
+      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 90, 115, 60, 60); 
+      //remove the image after drawing
+      img.style.display="none"
+         
+      }    
+}
+
+function getrLeg() { 
+     let rLegNumber = Math.floor(Math.random()*rLegs.length); 
+     var img=document.createElement('img');
+     img.src=rLegs[rLegNumber];
+     document.body.append(img);
+      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 170, 215, 60, 60); 
+      //remove the image after drawing
+      img.style.display="none"
+         
+      }    
+}
+
+function getlLeg() { 
+     let lLegNumber = Math.floor(Math.random()*lLegs.length); 
+     var img=document.createElement('img');
+     img.src=lLegs[lLegNumber];
+     document.body.append(img);
+      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 110, 215, 60, 60); 
+      //remove the image after drawing
+      img.style.display="none"
+         
+      }    
+}
+
+function gettail() { 
+     let tailNumber = Math.floor(Math.random()*tails.length); 
+     var img=document.createElement('img');
+     img.src=tails[tailNumber];
+     document.body.append(img);
+      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 155, 215, 30, 60); 
+      //remove the image after drawing
+      img.style.display="none"
+         
+      }    
+}
+
+
+
 function hang(){
     var ctx = document.getElementById("hangman").getContext('2d');
     if(numWrong==1){
-        ctx.beginPath(); //head
-            ctx.arc(150, 100, 20, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.arc(143, 95, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.arc(157, 95, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //mouth
-            ctx.arc(150, 103, 9, 0, Math.PI);
-            ctx.stroke();
+
+            gethead();
     }
     if(numWrong==2){
-        ctx.beginPath(); //body
-            ctx.moveTo(150,120);
-            ctx.lineTo(150,190);
-            ctx.stroke();
+        
+            getbody();
     }
     if(numWrong==3){
-        ctx.fillStyle = "white";
-        ctx.fillRect(138, 102, 24, 12); //cover mouth
-        ctx.beginPath(); //straight mouth
-            ctx.moveTo(140,108);
-            ctx.lineTo(160,108);
-            ctx.stroke();
-        ctx.beginPath(); //right arm
-            ctx.moveTo(150,135);
-            ctx.lineTo(180,160);
-            ctx.stroke();
+
+        getrArm();
+        
     }
     if(numWrong==4){
-        ctx.beginPath(); //left arm
-            ctx.moveTo(150,135);
-            ctx.lineTo(120,160);
-            ctx.stroke();
+        getlArm();
     }
     if(numWrong==5){
-        ctx.fillRect(138, 102, 24, 12); //cover mouth
-        ctx.beginPath(); //sad mouth
-            ctx.arc(150, 112, 9, 0, Math.PI, true);
-            ctx.stroke();
-        ctx.beginPath(); //right leg
-            ctx.moveTo(149,188);
-            ctx.lineTo(180,230);
-            ctx.stroke();
+       getrLeg();
     }
     if(numWrong==6){
-        ctx.beginPath(); //left leg
-            ctx.moveTo(151,188);
-            ctx.lineTo(120,230);
-            ctx.stroke();
+        getlLeg();
     }
     if(numWrong==7){
-        ctx.fillRect(138, 90, 24, 24); //cover face
-        ctx.fillRect(118, 121.2, 70, 120); //cover body
-        ctx.beginPath(); //straight mouth
-            ctx.moveTo(140,108);
-            ctx.lineTo(160,108);
-            ctx.stroke();
-        ctx.beginPath(); //body
-            ctx.moveTo(150,135);
-            ctx.lineTo(150,205);
-            ctx.stroke();
-        ctx.beginPath(); //right arm
-            ctx.moveTo(150,150);
-            ctx.lineTo(180,175);
-            ctx.stroke();
-        ctx.beginPath(); //left arm
-            ctx.moveTo(150,150);
-            ctx.lineTo(120,175);
-            ctx.stroke();
-        ctx.beginPath(); //right leg
-            ctx.moveTo(149,203);
-            ctx.lineTo(180,245);
-            ctx.stroke();
-        ctx.beginPath(); //left leg
-            ctx.moveTo(151,203);
-            ctx.lineTo(120,245);
-            ctx.stroke();
-        ctx.lineWidth=2;
-        ctx.beginPath(); //left eye
-            ctx.moveTo(140,93);
-            ctx.lineTo(146,98);
-            ctx.stroke();
-            ctx.moveTo(140,98);
-            ctx.lineTo(146,93);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.moveTo(154,98);
-            ctx.lineTo(160,93);
-            ctx.stroke(); 
-            ctx.moveTo(154,93);
-            ctx.lineTo(160,98);
-            ctx.stroke();
+        gettail();
     }
     if(numWrong==8){
-        ctx.fillRect(118, 135, 70, 120); //cover body
-        ctx.lineWidth=3;
-        ctx.beginPath(); //body
-            ctx.moveTo(150,150);
-            ctx.lineTo(150,220);
-            ctx.stroke();
-        ctx.beginPath(); //right arm
-            ctx.moveTo(150,165);
-            ctx.lineTo(180,180);
-            ctx.stroke();
-        ctx.beginPath(); //left arm
-            ctx.moveTo(150,165);
-            ctx.lineTo(120,180);
-            ctx.stroke();
-        ctx.beginPath(); //right leg
-            ctx.moveTo(149,218);
-            ctx.lineTo(180,260);
-            ctx.stroke();
-        ctx.beginPath(); //left leg
-            ctx.moveTo(151,218);
-            ctx.lineTo(120,260);
-            ctx.stroke();
+        
     }
     if(numWrong==9){
-        ctx.fillRect(118, 143, 70, 120); //cover body
-        ctx.lineWidth=3;
-        ctx.beginPath(); //body
-            ctx.moveTo(150,165);
-            ctx.lineTo(150,235);
-            ctx.stroke();
-        ctx.beginPath(); //right arm
-            ctx.moveTo(150,180);
-            ctx.lineTo(180,195);
-            ctx.stroke();
-        ctx.beginPath(); //left arm
-            ctx.moveTo(150,180);
-            ctx.lineTo(120,195);
-            ctx.stroke();
-        ctx.beginPath(); //right leg
-            ctx.moveTo(149,232);
-            ctx.lineTo(180,270);
-            ctx.stroke();
-        ctx.beginPath(); //left leg
-            ctx.moveTo(151,232);
-            ctx.lineTo(120,270);
-            ctx.stroke();
+        
     }
     if(numWrong==10){
-        ctx.fillRect(118, 148, 70, 120); //cover body
-        ctx.lineWidth=3;
-        ctx.beginPath(); //body
-            ctx.moveTo(150,180);
-            ctx.lineTo(150,250);
-            ctx.stroke();
-        ctx.beginPath(); //right arm
-            ctx.moveTo(150,195);
-            ctx.lineTo(180,210);
-            ctx.stroke();
-        ctx.beginPath(); //left arm
-            ctx.moveTo(150,195);
-            ctx.lineTo(120,210);
-            ctx.stroke();
-        ctx.beginPath(); //right leg
-            ctx.moveTo(149,247);
-            ctx.lineTo(200,270);
-            ctx.stroke();
-        ctx.beginPath(); //left leg
-            ctx.moveTo(151,247);
-            ctx.lineTo(100,270);
-            ctx.stroke();
+       
     }
     if(numWrong==11){
-        ctx.fillRect(90, 148, 120, 120); //cover body
-        ctx.lineWidth=3;
-        ctx.beginPath(); //body
-            ctx.moveTo(200,195);
-            ctx.lineTo(150,268);
-            ctx.stroke();
-        ctx.beginPath(); //right arm
-            ctx.moveTo(191,210);
-            ctx.lineTo(220,245);
-            ctx.stroke();
-        ctx.beginPath(); //left arm
-            ctx.moveTo(191,210);
-            ctx.lineTo(145,237);
-            ctx.stroke();
-        ctx.beginPath(); //right leg
-            ctx.moveTo(149,268);
-            ctx.lineTo(210,268);
-            ctx.stroke();
-        ctx.beginPath(); //left leg
-            ctx.moveTo(151,268);
-            ctx.lineTo(90,268);
-            ctx.stroke();
+        
     }
     if(numWrong==12){
-        ctx.fillRect(90, 145, 140, 120); //cover body
-        ctx.lineWidth=3;
-        ctx.beginPath(); //body
-            ctx.moveTo(230,220);
-            ctx.lineTo(150,268);
-            ctx.stroke();
-        ctx.beginPath(); //right arm
-            ctx.moveTo(212,230);
-            ctx.lineTo(240,255);
-            ctx.stroke();
-        ctx.beginPath(); //left arm
-            ctx.moveTo(212,230);
-            ctx.lineTo(165,237);
-            ctx.stroke();
+       
     }
     if(numWrong==13){
-        ctx.fillRect(90, 145, 160, 120); //cover body
-        ctx.lineWidth=3;
-        ctx.beginPath(); //body
-            ctx.moveTo(245,255);
-            ctx.lineTo(150,268);
-            ctx.stroke();
-        ctx.beginPath(); //right arm
-            ctx.moveTo(225,255);
-            ctx.lineTo(255,268);
-            ctx.stroke();
-        ctx.beginPath(); //left arm
-            ctx.moveTo(225,255);
-            ctx.lineTo(185,250);
-            ctx.stroke();
+        
     }
     if(numWrong==14){
-        ctx.fillRect(90, 145, 160, 120); //cover body
-        ctx.lineWidth=3;
-        ctx.beginPath(); //body
-            ctx.moveTo(245,264);
-            ctx.lineTo(150,268);
-            ctx.stroke();
-        ctx.beginPath(); //right arm
-            ctx.moveTo(225,268);
-            ctx.lineTo(255,268);
-            ctx.stroke();
-        ctx.beginPath(); //left arm
-            ctx.moveTo(225,264);
-            ctx.lineTo(185,264);
-            ctx.stroke();
-        ctx.fillRect(138, 90, 24, 24); //cover face
-        ctx.beginPath(); //straight mouth
-            ctx.moveTo(140,108);
-            ctx.lineTo(160,108);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.arc(143, 95, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.arc(157, 95, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
+        
     }
     if(numWrong==15){
-        ctx.fillRect(138, 102, 24, 12); //cover mouth
-        ctx.beginPath(); //mouth
-            ctx.arc(150, 103, 9, 0, Math.PI);
-            ctx.stroke();
+        
     }
     if(numWrong==16){
-        ctx.fillRect(128, 78, 45, 45); //cover head
-        ctx.beginPath(); //head
-            ctx.arc(150, 120, 20, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.arc(143, 115, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.arc(157, 115, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //mouth
-            ctx.arc(150, 123, 9, 0, Math.PI);
-            ctx.stroke();
+        
     }
     if(numWrong==17){
-        ctx.fillRect(128, 98, 45, 45); //cover head
-        ctx.beginPath(); //head
-            ctx.arc(150, 140, 20, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.arc(143, 135, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.arc(157, 135, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //mouth
-            ctx.arc(150, 143, 9, 0, Math.PI);
-            ctx.stroke();
+        
     }
     if(numWrong==17){
-        ctx.fillRect(128, 118, 45, 45); //cover head
-        ctx.beginPath(); //head
-            ctx.arc(150, 160, 20, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.arc(143, 155, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.arc(157, 155, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //straight mouth
-            ctx.moveTo(140,168);
-            ctx.lineTo(160,168);
-            ctx.stroke();
+       
     }
     if(numWrong==18){
-        ctx.fillRect(128, 138, 45, 45); //cover head
-        ctx.beginPath(); //head
-            ctx.arc(150, 180, 20, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.arc(143, 175, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.arc(157, 175, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //straight mouth
-            ctx.moveTo(140,188);
-            ctx.lineTo(160,188);
-            ctx.stroke();
+        
     }
     if(numWrong==19){
-        ctx.fillRect(128, 158, 45, 45); //cover head
-        ctx.beginPath(); //head
-            ctx.arc(150, 200, 20, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.arc(143, 195, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.arc(157, 195, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //sad mouth
-            ctx.arc(150, 213, 9, 0, Math.PI, true);
-            ctx.stroke();
+        
     }
     if(numWrong==20){
-        ctx.fillRect(128, 178, 45, 45); //cover head
-        ctx.beginPath(); //head
-            ctx.arc(150, 220, 20, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.arc(143, 215, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.arc(157, 215, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //sad mouth
-            ctx.arc(150, 233, 9, 0, Math.PI, true);
-            ctx.stroke();
+        
     }
     if(numWrong==21){
-        ctx.fillRect(128, 198, 45, 45); //cover head
-        ctx.beginPath(); //head
-            ctx.arc(150, 240, 20, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.arc(143, 235, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.arc(157, 235, 3.5, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //sad mouth
-            ctx.arc(150, 253, 9, 0, Math.PI, true);
-            ctx.stroke();
+        
     }
     if(numWrong==22){
-        ctx.fillRect(128, 218, 45, 45); //cover head
-        ctx.beginPath(); //head
-            ctx.arc(150, 243, 20, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.moveTo(140,234);
-            ctx.lineTo(146,239);
-            ctx.stroke();
-            ctx.moveTo(140,239);
-            ctx.lineTo(146,234);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.moveTo(154,234);
-            ctx.lineTo(160,239);
-            ctx.stroke(); 
-            ctx.moveTo(154,239);
-            ctx.lineTo(160,234);
-            ctx.stroke();
-        ctx.beginPath(); //straight mouth
-            ctx.moveTo(140,250);
-            ctx.lineTo(160,250);
-            ctx.stroke();
+        
     }
     if(numWrong==23){
-        ctx.fillRect(128, 220, 45, 45); //cover head
-        ctx.beginPath(); //head
-            ctx.arc(129, 246, 20, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.moveTo(115,245);
-            ctx.lineTo(121,250);
-            ctx.stroke();
-            ctx.moveTo(115,250);
-            ctx.lineTo(121,245);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.moveTo(120,234);
-            ctx.lineTo(126,239);
-            ctx.stroke(); 
-            ctx.moveTo(120,239);
-            ctx.lineTo(126,234);
-            ctx.stroke();
-        ctx.beginPath(); //straight mouth
-            ctx.moveTo(129,257);
-            ctx.lineTo(138,240);
-            ctx.stroke();
+        
     }
     if(numWrong==24){
-        ctx.fillRect(106, 218, 45, 45); //cover head
-        ctx.fillRect(120, 261, 25, 5); //cover rest of head
-        ctx.beginPath(); //head
-            ctx.arc(108, 247, 20, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.moveTo(105,257);
-            ctx.lineTo(111,262);
-            ctx.stroke();
-            ctx.moveTo(105,262);
-            ctx.lineTo(111,257);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.moveTo(94,248);
-            ctx.lineTo(100,253);
-            ctx.stroke(); 
-            ctx.moveTo(94,253);
-            ctx.lineTo(100,248);
-            ctx.stroke();
-        ctx.beginPath(); //straight mouth
-            ctx.moveTo(121,248);
-            ctx.lineTo(101,235);
-            ctx.stroke();
+       
     }
     if(numWrong==25){
-        ctx.fillRect(86, 220, 45, 45); //cover head
-        ctx.beginPath(); //head
-            ctx.arc(87, 248, 20, 0, 2*Math.PI);
-            ctx.stroke();
-        ctx.beginPath(); //left eye
-            ctx.moveTo(78,250);
-            ctx.lineTo(84,256);
-            ctx.stroke();
-            ctx.moveTo(78,256);
-            ctx.lineTo(84,250);
-            ctx.stroke();
-        ctx.beginPath(); //right eye
-            ctx.moveTo(91,250);
-            ctx.lineTo(97,256);
-            ctx.stroke(); 
-            ctx.moveTo(91,256);
-            ctx.lineTo(97,250);
-            ctx.stroke();
-        ctx.beginPath(); //straight mouth
-            ctx.moveTo(77,240);
-            ctx.lineTo(97,240);
-            ctx.stroke();
+        
     }
 }
 
@@ -952,3 +669,5 @@ function reset(){
     }
 }
 
+var menu = document.getElementById("themes");
+menu.addEventListener("themes", generateData);
