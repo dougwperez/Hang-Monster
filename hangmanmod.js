@@ -21,12 +21,13 @@ var tails = ['tails/monstertail1.jpg', 'tails/monstertail2.jpg', 'tails/monstert
 
 
 
+function sound() {
+document.getElementById("blank").src='roar.mp3';
+};
 
-
-
-
-
-
+function ping() {
+document.getElementById("blank").src='ping.mp3';
+};
 
 
 function dropdownmenu(){
@@ -58,6 +59,8 @@ function phrase(){
     document.getElementById('singlePage').style.display = "block";
     document.getElementById('categoryName').innerHTML = "Phrases";
     hangman();
+
+
 }
 
 function transportation(){
@@ -162,7 +165,8 @@ function hangman(){
     document.getElementById('multiPage').style.display = "none";
     document.getElementById('gamePage').style.display = "block";
     splitWords();
-    document.getElementById('challengeBank').style.display = "none";
+    //removed line below, unnecesary 
+    //document.getElementById('challengeBank').style.display = "none";
     draw();
 }
 
@@ -329,6 +333,7 @@ function guessLetter(){
             document.getElementById('letter'+a).style.visibility = "visible";
             correct++;
             numRight++;
+            ping();
         }
     }
     if(correct==0){
@@ -353,7 +358,7 @@ function guessLetter(){
         }
     }
     if(numWrong==7){
-        results.innerHTML = "You lose!<br>Keep guessing until you get it right.";
+        results.innerHTML = "You lose! Keep Trying!";
         document.getElementById('again').style.display = "block";
         document.getElementById('home').style.display = "block";
         document.getElementById('vidSent').style.display = "block";
@@ -429,19 +434,22 @@ function gethead() {
       img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 140,60, 60, 60); 
       //remove the image after drawing
       img.style.display="none"
+        console.log(img);
       
       }    
 
 }
+
 
 function getbody() { 
      let bodyNumber = Math.floor(Math.random()*bodys.length); 
      var img=document.createElement('img');
      img.src=bodys[bodyNumber];
      document.body.append(img);
-      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 140, 115, 60, 100); 
+      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 140, 115, 70, 100); 
       //remove the image after drawing
       img.style.display="none"
+      console.log(img);
          
       }    
 }
@@ -451,9 +459,10 @@ function getrArm() {
      var img=document.createElement('img');
      img.src=rArms[rArmNumber];
      document.body.append(img);
-      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 190, 115, 60, 60); 
+      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 185, 113, 60, 60); 
       //remove the image after drawing
       img.style.display="none"
+      console.log(img);
          
       }    
 }
@@ -466,6 +475,7 @@ function getlArm() {
       img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 90, 115, 60, 60); 
       //remove the image after drawing
       img.style.display="none"
+      console.log(img);
          
       }    
 }
@@ -475,9 +485,10 @@ function getrLeg() {
      var img=document.createElement('img');
      img.src=rLegs[rLegNumber];
      document.body.append(img);
-      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 170, 215, 60, 60); 
+      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 170, 213, 60, 60); 
       //remove the image after drawing
       img.style.display="none"
+      console.log(img);
          
       }    
 }
@@ -487,9 +498,10 @@ function getlLeg() {
      var img=document.createElement('img');
      img.src=lLegs[lLegNumber];
      document.body.append(img);
-      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 110, 215, 60, 60); 
+      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 110, 213, 60, 60); 
       //remove the image after drawing
       img.style.display="none"
+      console.log(img);
          
       }    
 }
@@ -502,9 +514,12 @@ function gettail() {
       img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 155, 215, 30, 60); 
       //remove the image after drawing
       img.style.display="none"
+      console.log(img);
          
       }    
 }
+
+
 
 
 
@@ -512,84 +527,100 @@ function hang(){
     var ctx = document.getElementById("hangman").getContext('2d');
     if(numWrong==1){
 
-            gethead();
+        gethead();
+        sound();
     }
     if(numWrong==2){
         
-            getbody();
+        getbody();
+        sound();
     }
     if(numWrong==3){
 
         getrArm();
+        sound();
         
     }
     if(numWrong==4){
         getlArm();
+        sound();
     }
     if(numWrong==5){
        getrLeg();
+       sound();
     }
     if(numWrong==6){
         getlLeg();
+        sound();
     }
     if(numWrong==7){
         gettail();
+        sound();
     }
     if(numWrong==8){
+        sound();
         
     }
     if(numWrong==9){
-        
+        sound();
     }
     if(numWrong==10){
+        sound();
        
     }
     if(numWrong==11){
+        sound();
         
     }
     if(numWrong==12){
+        sound();
        
     }
     if(numWrong==13){
+        sound();
         
     }
     if(numWrong==14){
+        sound();
         
     }
     if(numWrong==15){
+        sound();
         
     }
     if(numWrong==16){
-        
+        sound();
     }
     if(numWrong==17){
-        
+        sound();
     }
-    if(numWrong==17){
-       
-    }
+    
     if(numWrong==18){
-        
+        sound();
     }
     if(numWrong==19){
-        
+        sound();
     }
     if(numWrong==20){
-        
+        sound();
     }
     if(numWrong==21){
-        
+        sound();
     }
     if(numWrong==22){
+        sound();
         
     }
     if(numWrong==23){
+        sound();
         
     }
     if(numWrong==24){
+        sound();
        
     }
     if(numWrong==25){
+        sound();
         
     }
 }
