@@ -13,8 +13,8 @@ var birds = ["Nightjar", "Owl", "Sparrow", "Eagle", "Bluebird"];
 
 var heads = ['heads/monsterhead1.jpg', 'heads/monsterhead2.jpg', 'heads/monsterhead3.jpg', 'heads/monsterhead4.png', 'heads/monsterhead5.jpg', 'heads/monsterhead6.png'];
 var bodys = ['bodys/monsterbody1.jpg', 'bodys/monsterbody2.jpg', 'bodys/monsterbody3.jpg', 'bodys/monsterbody4.jpg', 'bodys/monsterbody5.png', 'bodys/monsterbody6.png'];  
-var rArms = ['rArms/monsterrarm1.jpg', 'rArms/monsterrarm2.jpg', 'rArms/monsterrarm3.jpg', 'rArms/monsterrarm4.jpg', 'rArms/monsterrarm5.png', 'rArms/monsterrarm6.png'];
-var lArms = ['lArms/monsterlarm1.jpg', 'lArms/monsterlarm2.jpg', 'lArms/monsterlarm3.jpg', 'lArms/monsterlarm4.jpg', 'lArms/monsterlarm5.png', 'lArms/monsterlarm6.png']; 
+var rArms = ['rArms/monsterrarm1.jpg', 'rArms/monsterrarm2.jpg', 'rArms/monsterrarm3.jpg', 'rArms/monsterrarm4.png', 'rArms/monsterrarm5.png', 'rArms/monsterrarm6.png'];
+var lArms = ['lArms/monsterlarm1.jpg', 'lArms/monsterlarm2.jpg', 'lArms/monsterlarm3.jpg', 'lArms/monsterlarm4.jpg', 'lArms/monsterlarm5.jpg', 'lArms/monsterlarm6.png']; 
 var rLegs = ['rLegs/monsterrleg1.jpg', 'rLegs/monsterrleg2.jpg', 'rLegs/monsterrleg3.png', 'rLegs/monsterrleg4.png', 'rLegs/monsterrleg5.png', 'rLegs/monsterrleg6.png'];
 var lLegs = ['lLegs/monsterlleg1.png', 'lLegs/monsterlleg2.png', 'lLegs/monsterlleg3.jpg', 'lLegs/monsterlleg4.png', 'lLegs/monsterlleg5.png', 'lLegs/monsterlleg6.jpg']; 
 var tails = ['tails/monstertail1.jpg', 'tails/monstertail2.jpg', 'tails/monstertail3.jpg', 'tails/monstertail4.jpg', 'tails/monstertail5.jpg', 'tails/monstertail6.png'];
@@ -24,6 +24,7 @@ var tails = ['tails/monstertail1.jpg', 'tails/monstertail2.jpg', 'tails/monstert
 function sound() {
 document.getElementById("blank").src='roar.mp3';
 };
+
 
 function ping() {
 document.getElementById("blank").src='ping.mp3';
@@ -459,7 +460,7 @@ function getrArm() {
      var img=document.createElement('img');
      img.src=rArms[rArmNumber];
      document.body.append(img);
-      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 185, 113, 60, 60); 
+      img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 188, 113, 60, 60); 
       //remove the image after drawing
       img.style.display="none"
       console.log(img);
