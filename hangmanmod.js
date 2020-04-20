@@ -431,7 +431,6 @@ function gethead() {
      let headNumber = Math.floor(Math.random()*heads.length); 
      var img=document.createElement('img');
      img.src=heads[headNumber];
-     document.body.append(img);
       img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 140,60, 60, 60); 
       //remove the image after drawing
       img.style.display="none"
@@ -446,7 +445,6 @@ function getbody() {
      let bodyNumber = Math.floor(Math.random()*bodys.length); 
      var img=document.createElement('img');
      img.src=bodys[bodyNumber];
-     document.body.append(img);
       img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 140, 115, 70, 100); 
       //remove the image after drawing
       img.style.display="none"
@@ -459,7 +457,6 @@ function getrArm() {
      let rArmNumber = Math.floor(Math.random()*rArms.length); 
      var img=document.createElement('img');
      img.src=rArms[rArmNumber];
-     document.body.append(img);
       img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 188, 113, 60, 60); 
       //remove the image after drawing
       img.style.display="none"
@@ -472,7 +469,6 @@ function getlArm() {
      let lArmNumber = Math.floor(Math.random()*lArms.length); 
      var img=document.createElement('img');
      img.src=lArms[lArmNumber];
-     document.body.append(img);
       img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 90, 115, 60, 60); 
       //remove the image after drawing
       img.style.display="none"
@@ -485,7 +481,6 @@ function getrLeg() {
      let rLegNumber = Math.floor(Math.random()*rLegs.length); 
      var img=document.createElement('img');
      img.src=rLegs[rLegNumber];
-     document.body.append(img);
       img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 170, 213, 60, 60); 
       //remove the image after drawing
       img.style.display="none"
@@ -498,7 +493,6 @@ function getlLeg() {
      let lLegNumber = Math.floor(Math.random()*lLegs.length); 
      var img=document.createElement('img');
      img.src=lLegs[lLegNumber];
-     document.body.append(img);
       img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 110, 213, 60, 60); 
       //remove the image after drawing
       img.style.display="none"
@@ -511,7 +505,6 @@ function gettail() {
      let tailNumber = Math.floor(Math.random()*tails.length); 
      var img=document.createElement('img');
      img.src=tails[tailNumber];
-     document.body.append(img);
       img.onload = function () {document.getElementById("hangman").getContext('2d').drawImage(img, 155, 215, 30, 60); 
       //remove the image after drawing
       img.style.display="none"
