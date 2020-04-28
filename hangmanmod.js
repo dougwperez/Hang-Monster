@@ -57,7 +57,7 @@ function phrase(){
     rand = Math.floor(Math.random()*phrases.length);
     word = phrases[rand];
     document.getElementById('introPage').style.display = "none";
-    document.getElementById('singlePage').style.display = "block";
+    document.getElementById('singlePage').style.display = "none";
     document.getElementById('categoryName').innerHTML = "Phrases";
     hangman();
 
