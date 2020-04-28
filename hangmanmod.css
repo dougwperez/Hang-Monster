@@ -6,11 +6,11 @@ html{
     font-family: 'courier', cursive;
 }
 body{
-    background: #c1c1c1;
-    background: -webkit-linear-gradient(#c1c1c1, white, #c1c1c1);
-    background: -o-linear-gradient(#c1c1c1, white, #c1c1c1);
-    background: -moz-linear-gradient(#c1c1c1, white, #c1c1c1);
-    background: linear-gradient(#c1c1c1, white, #c1c1c1);
+    background: #eba93f;
+    background: -webkit-linear-gradient(#eba93f, white, #eba93f);
+    background: -o-linear-gradient(#eba93f, white, #eba93f);
+    background: -moz-linear-gradient(#eba93f, white, #eba93f);
+    background: linear-gradient(#eba93f, white, #eba93f);
 }
 a{
     color: #b10000;
