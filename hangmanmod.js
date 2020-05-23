@@ -8,7 +8,7 @@ var phrases = ["No big deal", "Oh my God!", "My bad", "In no time", "Pig out"];
 var transportations =["Automobile", "Airplane", "Train", "Motorcyle", "Cargo Ship"];
 var animals = ["Elephant", "Giraffe", "Snake", "Whale", "Gorilla"];
 var familys = ["Mother", "Father", "Cousin", "Grandfather", "Grandmother"];
-var jobs = ["Teacher", "Firefighter", "Developer", "Doctor", "Laywer"];
+var jobs = ["Teacher", "Firefighter", "Developer", "Doctor", "Lawyer"];
 var birds = ["Nightjar", "Owl", "Sparrow", "Eagle", "Bluebird"];
 
 var heads = ['heads/monsterhead1.jpg', 'heads/monsterhead2.jpg', 'heads/monsterhead3.jpg', 'heads/monsterhead4.png', 'heads/monsterhead5.jpg', 'heads/monsterhead6.png'];
