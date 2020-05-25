@@ -2,10 +2,9 @@
 <html lang="">
 <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hang Monster</title>
+    <title>Online Hangman</title>
     <link rel="stylesheet" type="text/css" href="hangmanmod.css" />
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter|Gloria+Hallelujah' rel='stylesheet' type='text/css'>
     
@@ -69,6 +68,18 @@
         </div>
     </div>
     <div id="gamePage">
+
+        <div class="toggler">
+            <li class="list" id=MM><a href="https://dougwperez.github.io/Hang-Monster/"><strong>Main Menu</strong></a></li>
+            <li class="list" onclick="hint()"><a href="#news"><strong>Need a hint?</strong></a></li>
+          </div>
+
+          <div class="hintbox" id="hintbox">
+            <button class="closebtn" onclick="hidebox()"> X </button>
+            <h2>Here's a hint!</h2>
+            <span id="hinttext" class="text" name="code"></span>
+          </div>
+
         <p id="categoryName"></p>
         <div id="wordWrap">
             <div id="underline1">
@@ -383,6 +394,7 @@
    
 
     <script type="text/javascript" src="hangmanmod.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>window.onload = draw; 
 
  </script>
