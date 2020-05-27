@@ -14,10 +14,8 @@ var transportations = [
 ];
 var animals = ["Elephant", "Giraffe", "Snake", "Whale", "Gorilla"];
 var familys = ["Mother", "Father", "Cousin", "Grandfather", "Grandmother"];
-//var jobs = ["Teacher", "Firefighter", "Developer", "Doctor", "Lawyer"];
-var jobs = ["Teacher", "Firefigher"];
-//var birds = ["Nightjar", "Owl", "Sparrow", "Eagle", "Bluebird"];
-var birds = ["Nightjar", "Owl"];
+var jobs = ["Teacher", "Firefighter", "Developer", "Doctor", "Lawyer"];
+var birds = ["Nightjar", "Owl", "Sparrow", "Eagle", "Bluebird"];
 
 var heads = [
   "heads/monsterhead1.jpg",
@@ -107,6 +105,22 @@ function phrase() {
   document.getElementById("singlePage").style.display = "none";
   document.getElementById("categoryName").innerHTML = "Phrases";
   hangman();
+  switch (word) {
+    case "No big deal":
+      $("#hinttext").html("blah blah deal");
+      break;
+    case "Oh my God!":
+      $("#hinttext").html("blah blah god");
+      break;
+    case "My bad":
+      $("#hinttext").html("blah blah bad");
+      break;
+    case "In no time":
+      $("#hinttext").html("blah blah time");
+      break;
+    case "Pig out":
+      $("#hinttext").html("blah blah out");
+  }
 }
 
 function transportation() {
@@ -116,6 +130,22 @@ function transportation() {
   document.getElementById("singlePage").style.display = "none";
   document.getElementById("categoryName").innerHTML = "Transportation";
   hangman();
+  switch (word) {
+    case "Automobile":
+      $("#hinttext").html("blah blah car");
+      break;
+    case "Airplane":
+      $("#hinttext").html("blah blah it flys");
+      break;
+    case "Train":
+      $("#hinttext").html("blah blah chu chu");
+      break;
+    case "Motorcyle":
+      $("#hinttext").html("blah blah moto");
+      break;
+    case "Cargo Ship":
+      $("#hinttext").html("blah blah ship");
+  }
 }
 
 function animal() {
@@ -125,6 +155,22 @@ function animal() {
   document.getElementById("singlePage").style.display = "none";
   document.getElementById("categoryName").innerHTML = "Animals";
   hangman();
+  switch (word) {
+    case "Elepahnt":
+      $("#hinttext").html("blah blah long trunk");
+      break;
+    case "Giraffe":
+      $("#hinttext").html("blah blah it long neck");
+      break;
+    case "Whale":
+      $("#hinttext").html("blah blah big fish");
+      break;
+    case "Snake":
+      $("#hinttext").html("blah blah scary and scaley");
+      break;
+    case "Gorilla":
+      $("#hinttext").html("blah blah ship");
+  }
 }
 
 function family() {
@@ -160,10 +206,22 @@ function job() {
   document.getElementById("singlePage").style.display = "none";
   document.getElementById("categoryName").innerHTML = "Jobs";
   hangman();
-  if (word == "Teacher") {
-    document.getElementById("hinttext").innerHTML = "Person in class";
-  } else if (word == "Firefigher") {
-    document.getElementById("hinttext").innerHTML = "They fight fire";
+
+  switch (word) {
+    case "Teacher":
+      $("#hinttext").html("blah blah car");
+      break;
+    case "Firefighter":
+      $("#hinttext").html("blah blah it flys");
+      break;
+    case "Developer":
+      $("#hinttext").html("blah blah chu chu");
+      break;
+    case "Doctor":
+      $("#hinttext").html("blah blah moto");
+      break;
+    case "Lawyer":
+      $("#hinttext").html("blah blah ship");
   }
 }
 
@@ -177,10 +235,19 @@ function bird() {
 
   switch (word) {
     case "Nightjar":
-      $("#hinttext").html("Bird Jar");
+      $("#hinttext").html("blah blah car");
       break;
     case "Owl":
-      $("#hinttext").html("Bird of night");
+      $("#hinttext").html("blah blah it flys");
+      break;
+    case "Sparrow":
+      $("#hinttext").html("blah blah chu chu");
+      break;
+    case "Eagle":
+      $("#hinttext").html("blah blah moto");
+      break;
+    case "Bluebird":
+      $("#hinttext").html("blah blah ship");
   }
 }
 
