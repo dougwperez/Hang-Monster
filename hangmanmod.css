@@ -563,7 +563,6 @@ html,
 }
 #letterBank,
 #challengeBank {
-  flex-direction: row;
   width: 780px;
   height: 128px;
   margin: 20px auto;
@@ -580,6 +579,7 @@ html,
   width: 50px;
   height: 58px;
   margin: 0px 10px 10px 0px;
+
   cursor: pointer;
   background-color: #adadad;
   border-style: outset;
@@ -593,7 +593,7 @@ html,
   background-color: gray;
   width: 50px;
   font-size: 45px;
-  padding-top: 3px;
+  padding-bottom: 3px;
   border-style: inset;
 }
 #results {
