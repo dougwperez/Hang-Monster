@@ -15,13 +15,13 @@ body {
 
 .toggler {
   list-style-type: none;
-  width: 249px;
+  width: 246px;
   margin: 0;
   padding: 0;
   overflow: hidden;
   font-size: 1.05em;
   font-family: sans-serif;
-  background-color: lightgrey;
+  background-color: #adadad;
   border: 2px outset;
 
   margin-left: 1%;
@@ -93,8 +93,9 @@ h2 {
 }
 
 .list a:hover {
-  background-color: #f90b6d;
+  background-color: #797979;
 }
+
 a {
   color: #b10000;
   text-decoration: none;
