@@ -98,6 +98,7 @@ function dropdownmenu() {
   }
 }
 
+
 function phrase() {
   rand = Math.floor(Math.random() * phrases.length);
   word = phrases[rand];
@@ -107,19 +108,19 @@ function phrase() {
   hangman();
   switch (word) {
     case "No big deal":
-      $("#hinttext").html("blah blah deal");
+      $("#hinttext").html("You are welcome. It’s a piece of cake.");
       break;
     case "Oh my God!":
-      $("#hinttext").html("blah blah god");
+      $("#hinttext").html("Someone yells this when something bad happens.");
       break;
     case "My bad":
-      $("#hinttext").html("blah blah bad");
+      $("#hinttext").html("Oops! It’s my fault. ");
       break;
     case "In no time":
-      $("#hinttext").html("blah blah time");
+      $("#hinttext").html("Right away!");
       break;
     case "Pig out":
-      $("#hinttext").html("blah blah out");
+      $("#hinttext").html("Hungry piggies.");
   }
 }
 
@@ -132,19 +133,19 @@ function transportation() {
   hangman();
   switch (word) {
     case "Automobile":
-      $("#hinttext").html("blah blah car");
+      $("#hinttext").html("Another word for it is car.");
       break;
     case "Airplane":
-      $("#hinttext").html("blah blah it flys");
+      $("#hinttext").html("Fly like a bird.");
       break;
     case "Train":
-      $("#hinttext").html("blah blah chu chu");
+      $("#hinttext").html("Looks like a long snake.");
       break;
-    case "Motorcyle":
-      $("#hinttext").html("blah blah moto");
+    case "Motorcycle":
+      $("#hinttext").html("Wear a helmet to ride this two-wheels thing!");
       break;
     case "Cargo Ship":
-      $("#hinttext").html("blah blah ship");
+      $("#hinttext").html("Carry goods on the ocean.");
   }
 }
 
@@ -157,19 +158,21 @@ function animal() {
   hangman();
   switch (word) {
     case "Elepahnt":
-      $("#hinttext").html("blah blah long trunk");
+      $("#hinttext").html("Large with thick, gray skin and a big trunk.");
       break;
     case "Giraffe":
-      $("#hinttext").html("blah blah it long neck");
+      $("#hinttext").html("Our long necks are impressive.");
       break;
     case "Whale":
-      $("#hinttext").html("blah blah big fish");
+      $("#hinttext").html(
+        "Large mammal in the ocean with a blowhole on top of the head."
+      );
       break;
     case "Snake":
-      $("#hinttext").html("blah blah scary and scaley");
+      $("#hinttext").html("I have no legs and sometimes I have a rattle.");
       break;
     case "Gorilla":
-      $("#hinttext").html("blah blah ship");
+      $("#hinttext").html("Ape!");
   }
 }
 
@@ -183,19 +186,19 @@ function family() {
 
   switch (word) {
     case "Mother":
-      $("#hinttext").html("Word for Mommy");
+      $("#hinttext").html("Word for Mommy.");
       break;
     case "Father":
-      $("#hinttext").html("Word for Daddy");
+      $("#hinttext").html("Word for Daddy.");
       break;
     case "Cousin":
-      $("#hinttext").html("Your uncle's child");
+      $("#hinttext").html("The son or daughter of an aunt or uncle.");
       break;
     case "Grandfather":
-      $("#hinttext").html("Your father's father");
+      $("#hinttext").html("Parents’ father.");
       break;
     case "Grandmother":
-      $("#hinttext").html("Your mother's mother");
+      $("#hinttext").html("Parents’ mother.");
   }
 }
 
@@ -209,19 +212,19 @@ function job() {
 
   switch (word) {
     case "Teacher":
-      $("#hinttext").html("blah blah car");
+      $("#hinttext").html("Who teaches you?");
       break;
     case "Firefighter":
-      $("#hinttext").html("blah blah it flys");
+      $("#hinttext").html("Fire is afraid of them.");
       break;
     case "Developer":
-      $("#hinttext").html("blah blah chu chu");
+      $("#hinttext").html("They design your games!");
       break;
     case "Doctor":
-      $("#hinttext").html("blah blah moto");
+      $("#hinttext").html("They cure you!");
       break;
     case "Lawyer":
-      $("#hinttext").html("blah blah ship");
+      $("#hinttext").html("They represent you in court.");
   }
 }
 
@@ -235,19 +238,21 @@ function bird() {
 
   switch (word) {
     case "Nightjar":
-      $("#hinttext").html("blah blah car");
+      $("#hinttext").html("Nocturnal birds of the goatsucker family.");
       break;
     case "Owl":
-      $("#hinttext").html("blah blah it flys");
+      $("#hinttext").html("Work at night with big eyes!");
       break;
     case "Sparrow":
-      $("#hinttext").html("blah blah chu chu");
+      $("#hinttext").html(
+        "Small with brown or gray feathers; begins with letter s."
+      );
       break;
     case "Eagle":
-      $("#hinttext").html("blah blah moto");
+      $("#hinttext").html("Large and strong; hunt mice sometimes.");
       break;
     case "Bluebird":
-      $("#hinttext").html("blah blah ship");
+      $("#hinttext").html("Small, blue songbirds!");
   }
 }
 
