@@ -12,7 +12,7 @@ var transportations = [
   "Motorcyle",
   "Cargo Ship",
 ];
-var animals = ["Elephant", "Giraffe", "Snake", "Whale", "Gorilla", "Monkey", "Dog", "Kangaroo", "Aardvark", "Hippo", "Bison":];
+var animals = ["Elephant", "Giraffe", "Snake", "Whale", "Gorilla", "Monkey", "Dog", "Kangaroo", "Aardvark", "Hippo", "Bison"];
 var familys = ["Mother", "Father", "Cousin", "Grandfather", "Grandmother"];
 var jobs = ["Teacher", "Firefighter", "Developer", "Doctor", "Lawyer"];
 var birds = ["Nightjar", "Owl", "Sparrow", "Eagle", "Bluebird"];
