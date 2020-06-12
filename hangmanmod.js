@@ -272,6 +272,7 @@ function animal() {
       break;
     case "Hippo":
       $("#hinttext").html("Big fat water animal from Africa.");
+      break;
     case "Bison":
       $("#hinttext").html("An animal from the American west.");
       break;
