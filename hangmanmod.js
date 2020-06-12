@@ -4,17 +4,74 @@ var numWrong = 0;
 var numRight = 0;
 var phraseLength = 0;
 var numChar = 0;
-var phrases = ["No big deal", "Oh my God!", "My bad", "In no time", "Pig out"];
+var phrases = [
+  "No big deal",
+  "Oh my God!",
+  "My bad",
+  "In no time",
+  "Pig out",
+  "Piece of cake",
+  "Raining cats and dogs",
+  "Its not rocket science",
+  "Not a big fan",
+  "knock on wood",
+];
 var transportations = [
   "Automobile",
   "Airplane",
   "Train",
-  "Motorcyle",
+  "Motorcycle",
   "Cargo Ship",
+  "Spaceship",
+  "Tractor",
+  "Bike",
+  "Bus",
+  "Subway",
 ];
-var animals = ["Elephant", "Giraffe", "Snake", "Whale", "Gorilla", "Monkey", "Dog", "Kangaroo", "Aardvark", "Hippo", "Bison", "Hawk", "Skunk"];
-var familys = ["Mother", "Father", "Cousin", "Grandfather", "Grandmother"];
-var jobs = ["Teacher", "Firefighter", "Developer", "Doctor", "Lawyer"];
+var animals = [
+  "Elephant",
+  "Giraffe",
+  "Snake",
+  "Whale",
+  "Gorilla",
+  "Monkey",
+  "Dog",
+  "Kangaroo",
+  "Aardvark",
+  "Hippo",
+  "Bison",
+  "Hawk",
+  "Skunk",
+];
+var familys = [
+  "Mother",
+  "Father",
+  "Cousin",
+  "Grandfather",
+  "Grandmother",
+  "Uncle",
+  "Aunt",
+  "Sister",
+  "Brother",
+  "Nephew",
+  "Niece",
+];
+var jobs = [
+  "Teacher",
+  "Firefighter",
+  "Developer",
+  "Doctor",
+  "Lawyer",
+  "Policeman",
+  "President",
+  "Fisherman",
+  "Nurse",
+  "Soldier",
+  "Dancer",
+  "Actor",
+  "Astronaut",
+  "Accountant",
+];
 var birds = ["Nightjar", "Owl", "Sparrow", "Eagle", "Bluebird"];
 
 var heads = [
@@ -98,7 +155,6 @@ function dropdownmenu() {
   }
 }
 
-
 function phrase() {
   rand = Math.floor(Math.random() * phrases.length);
   word = phrases[rand];
@@ -121,6 +177,21 @@ function phrase() {
       break;
     case "Pig out":
       $("#hinttext").html("Hungry piggies.");
+      break;
+    case "Piece of cake":
+      $("#hinttext").html("Something that is very easy.");
+      break;
+    case "Raining cats and dogs":
+      $("#hinttext").html("What you say when it rains a lot.");
+      break;
+    case "Its not rocket science":
+      $("#hinttext").html("Oops! It’s very easy.");
+      break;
+    case "Not a big fan":
+      $("#hinttext").html("Something you don't like.");
+      break;
+    case "knock on wood":
+      $("#hinttext").html("Good luck saying.");
   }
 }
 
@@ -146,6 +217,21 @@ function transportation() {
       break;
     case "Cargo Ship":
       $("#hinttext").html("Carry goods on the ocean.");
+      break;
+    case "Spaceship":
+      $("#hinttext").html("We go to the moon with this.");
+      break;
+    case "Tractor":
+      $("#hinttext").html("Used on a farm.");
+      break;
+    case "Bike":
+      $("#hinttext").html("First vehicle a kid will learn to use.");
+      break;
+    case "Bus":
+      $("#hinttext").html("Can hold many people");
+      break;
+    case "Subway":
+      $("#hinttext").html("Another name for this is the metro");
   }
 }
 
@@ -157,22 +243,43 @@ function animal() {
   document.getElementById("categoryName").innerHTML = "Animals";
   hangman();
   switch (word) {
-    case "Elepahnt":
+    case "Elephant":
       $("#hinttext").html("Large with thick, gray skin and a big trunk.");
       break;
     case "Giraffe":
       $("#hinttext").html("Our long necks are impressive.");
       break;
     case "Whale":
-      $("#hinttext").html(
-        "Large mammal in the ocean with a blowhole on top of the head."
-      );
+      $("#hinttext").html("Large ocean mammal with a blowhole on his head.");
       break;
     case "Snake":
       $("#hinttext").html("I have no legs and sometimes I have a rattle.");
       break;
     case "Gorilla":
       $("#hinttext").html("Ape!");
+      break;
+    case "Monkey":
+      $("#hinttext").html("Like a hairy person.");
+      break;
+    case "Dog":
+      $("#hinttext").html("Man's best friend.");
+      break;
+    case "Kangaroo":
+      $("#hinttext").html("This animal loves to jump.");
+      break;
+    case "Aardvark":
+      $("#hinttext").html("Many As in his name.");
+      break;
+    case "Hippo":
+      $("#hinttext").html("Big fat water animal from Africa.");
+    case "Bison":
+      $("#hinttext").html("An animal from the American west.");
+      break;
+    case "Hawk":
+      $("#hinttext").html("This predator flys in the sky.");
+      break;
+    case "Skunk":
+      $("#hinttext").html("They smell really bad.");
   }
 }
 
@@ -199,6 +306,26 @@ function family() {
       break;
     case "Grandmother":
       $("#hinttext").html("Parents’ mother.");
+      break;
+    case "Uncle":
+      $("#hinttext").html("Mother's brother.");
+      break;
+    case "Aunt":
+      $("#hinttext").html("Father's sister.");
+      break;
+    case "Sister":
+      $("#hinttext").html("A female sibling.");
+      break;
+    case "Brother":
+      $("#hinttext").html("A male sibling.");
+      break;
+    case "Nephew":
+      $("#hinttext").html("Not a niece.");
+      break;
+    case "Niece":
+      $("#hinttext").html("Not a nephew.");
+    case "President":
+      $("#hinttext").html("They lead a country.");
   }
 }
 
@@ -225,6 +352,31 @@ function job() {
       break;
     case "Lawyer":
       $("#hinttext").html("They represent you in court.");
+      break;
+    case "Policeman":
+      $("#hinttext").html("They arrest bad guys.");
+      break;
+    case "Fisherman":
+      $("#hinttext").html("They go fishing a lot.");
+      break;
+    case "Nurse":
+      $("#hinttext").html("They help people when they are sick.");
+      break;
+    case "Soldier":
+      $("#hinttext").html("They serve in the army.");
+      break;
+    case "Dancer":
+      $("#hinttext").html("They love to go dancing.");
+      break;
+    case "Actor":
+      $("#hinttext").html("You see them in the movies.");
+      break;
+    case "Astronaut":
+      $("#hinttext").html("They work in space.");
+      break;
+    case "Accountant":
+      $("#hinttext").html("They work with money, but not a banker.");
+      break;
   }
 }
 
@@ -912,4 +1064,3 @@ function hidebox() {
   hintbox.style.display = "none";
   aboutbox.style.display = "none";
 }
-
