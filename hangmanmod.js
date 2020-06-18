@@ -131,13 +131,13 @@ var tails = [
   "tails/monstertail6.png",
 ];
 
-function sound() {
-  document.getElementById("blank").src = "roar.mp3";
-}
+var roar = new Audio();
+var ping = new Audio();
 
-function ping() {
-  document.getElementById("blank").src = "ping.mp3";
-}
+roar.src = "roar.mp3";
+roar.volume = 0.3;
+ping.src = "ping.mp3";
+ping.volume = 0.3;
 
 function dropdownmenu() {
   if (menu.value == "phrase") {
@@ -325,6 +325,7 @@ function family() {
       break;
     case "Niece":
       $("#hinttext").html("Not a nephew.");
+      break;
     case "President":
       $("#hinttext").html("They lead a country.");
   }
@@ -702,7 +703,7 @@ function guessLetter() {
       document.getElementById("letter" + a).style.visibility = "visible";
       correct++;
       numRight++;
-      ping();
+      ping.play();
     }
   }
   if (correct == 0) {
@@ -904,86 +905,86 @@ function hang() {
   var ctx = document.getElementById("hangman").getContext("2d");
   if (numWrong == 1) {
     gethead();
-    sound();
+    roar.play();
   }
   if (numWrong == 2) {
     getbody();
-    sound();
+    roar.play();
   }
   if (numWrong == 3) {
     getrArm();
-    sound();
+    roar.play();
   }
   if (numWrong == 4) {
     getlArm();
-    sound();
+    roar.play();
   }
   if (numWrong == 5) {
     getrLeg();
-    sound();
+    roar.play();
   }
   if (numWrong == 6) {
     getlLeg();
-    sound();
+    roar.play();
   }
   if (numWrong == 7) {
     gettail();
-    sound();
+    roar.play();
   }
   if (numWrong == 8) {
-    sound();
+    roar.play();
   }
   if (numWrong == 9) {
-    sound();
+    roar.play();
   }
   if (numWrong == 10) {
-    sound();
+    roar.play();
   }
   if (numWrong == 11) {
-    sound();
+    roar.play();
   }
   if (numWrong == 12) {
-    sound();
+    roar.play();
   }
   if (numWrong == 13) {
-    sound();
+    roar.play();
   }
   if (numWrong == 14) {
-    sound();
+    roar.play();
   }
   if (numWrong == 15) {
-    sound();
+    roar.play();
   }
   if (numWrong == 16) {
-    sound();
+    roar.play();
   }
   if (numWrong == 17) {
-    sound();
+    roar.play();
   }
 
   if (numWrong == 18) {
-    sound();
+    roar.play();
   }
   if (numWrong == 19) {
-    sound();
+    roar.play();
   }
   if (numWrong == 20) {
-    sound();
+    roar.play();
   }
   if (numWrong == 21) {
-    sound();
+    roar.play();
   }
   if (numWrong == 22) {
-    sound();
+    roar.play();
   }
   if (numWrong == 23) {
-    sound();
+    roar.play();
   }
   if (numWrong == 24) {
-    sound();
+    roar.play();
   }
   if (numWrong == 25) {
-    sound();
+    roar.play();
   }
 }
 
