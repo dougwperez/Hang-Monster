@@ -74,6 +74,14 @@ var jobs = [
 ];
 var birds = ["Nightjar", "Owl", "Sparrow", "Eagle", "Bluebird"];
 
+//value for RandomW is stored here, fetched from wordnik API
+fetch(
+  "http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
+)
+  .then((res) => res.json())
+  .then((data) => (randomW = data[0].word))
+  .then(() => console.log(randomW));
+
 var heads = [
   "heads/monsterhead1.jpg",
   "heads/monsterhead2.jpg",
@@ -152,7 +160,18 @@ function dropdownmenu() {
     job();
   } else if (menu.value == "bird") {
     bird();
+  } else if (menu.value == "random") {
+    randomWords();
   }
+}
+
+function randomWords() {
+  //rand = Math.floor(Math.random() * randomW.length);
+  word = randomW;
+  document.getElementById("introPage").style.display = "none";
+  document.getElementById("singlePage").style.display = "none";
+  document.getElementById("categoryName").innerHTML = "Random";
+  hangman();
 }
 
 function phrase() {
@@ -1029,6 +1048,9 @@ function reset() {
   if (phrases.indexOf(word) > -1) {
     phrases.splice(rand, 1);
     phrase();
+  } else if (randomW.indexOf(word) > -1) {
+    randomW.splice(rand, 1);
+    randomWords();
   } else if (transportations.indexOf(word) > -1) {
     transportations.splice(rand, 1);
     transportation();
