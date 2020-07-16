@@ -76,7 +76,7 @@ var birds = ["Nightjar", "Owl", "Sparrow", "Eagle", "Bluebird"];
 
 //value for RandomW is stored here, fetched from wordnik API
 fetch(
-  "http://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
+  "https://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
 )
   .then((res) => res.json())
   .then((data) => (randomW = data[0].word))
