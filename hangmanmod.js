@@ -75,6 +75,7 @@ var jobs = [
 var birds = ["Nightjar", "Owl", "Sparrow", "Eagle", "Bluebird"];
 
 //value for RandomW is stored here, fetched from wordnik API
+
 fetch(
   "https://api.wordnik.com/v4/words.json/randomWords?hasDictionaryDef=true&minCorpusCount=0&minLength=5&maxLength=15&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5"
 )
@@ -87,39 +88,39 @@ var heads = [
   "heads/monsterhead2.jpg",
   "heads/monsterhead3.jpg",
   "heads/monsterhead4.png",
-  "heads/monsterhead5.jpg",
+  "heads/monsterhead5.png",
   "heads/monsterhead6.png",
 ];
 var bodys = [
   "bodys/monsterbody1.jpg",
   "bodys/monsterbody2.jpg",
-  "bodys/monsterbody3.jpg",
-  "bodys/monsterbody4.jpg",
+  "bodys/monsterbody3.png",
+  "bodys/monsterbody4.png",
   "bodys/monsterbody5.png",
   "bodys/monsterbody6.png",
 ];
 var rArms = [
   "rArms/monsterrarm1.jpg",
-  "rArms/monsterrarm2.jpg",
+  "rArms/monsterrarm2-removebg-preview.png",
   "rArms/monsterrarm3.jpg",
   "rArms/monsterrarm4.png",
   "rArms/monsterrarm5.png",
   "rArms/monsterrarm6.png",
 ];
 var lArms = [
-  "lArms/monsterlarm1.jpg",
-  "lArms/monsterlarm2.jpg",
-  "lArms/monsterlarm3.jpg",
-  "lArms/monsterlarm4.jpg",
-  "lArms/monsterlarm5.jpg",
-  "lArms/monsterlarm6.png",
+  "lArms/monsterlarm1-removebg-preview.png",
+  "lArms/monsterlarm2-removebg-preview.png",
+  "lArms/monsterlarm3-removebg-preview.png",
+  "lArms/monsterlarm4-removebg-preview.png",
+  "lArms/monsterlarm5-removebg-preview.png",
+  "lArms/monsterlarm6-removebg-preview.png",
 ];
 var rLegs = [
   "rLegs/monsterrleg1.jpg",
   "rLegs/monsterrleg2.jpg",
   "rLegs/monsterrleg3.png",
   "rLegs/monsterrleg4.png",
-  "rLegs/monsterrleg5.png",
+  "rLegs/monsterrleg5-removebg-preview.png",
   "rLegs/monsterrleg6.png",
 ];
 var lLegs = [
@@ -131,12 +132,12 @@ var lLegs = [
   "lLegs/monsterlleg6.jpg",
 ];
 var tails = [
-  "tails/monstertail1.jpg",
-  "tails/monstertail2.jpg",
-  "tails/monstertail3.jpg",
-  "tails/monstertail4.jpg",
-  "tails/monstertail5.jpg",
-  "tails/monstertail6.png",
+  "tails/monstertail1-removebg-preview.png",
+  "tails/monstertail2-removebg-preview.png",
+  "tails/monstertail3-removebg-preview.png",
+  "tails/monstertail4-removebg-preview.png",
+  "tails/monstertail5-removebg-preview.png",
+  "tails/monstertail6-removebg-preview.png",
 ];
 
 var roar = new Audio();
